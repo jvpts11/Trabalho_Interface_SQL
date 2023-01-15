@@ -16,5 +16,45 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Version alpha 0.1, built to interact with the smart library database");
+        }
+
+        private void bookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Book_Query().Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
