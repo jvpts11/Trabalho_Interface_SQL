@@ -31,12 +31,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.book_id_input = new System.Windows.Forms.TextBox();
+            this.book_name_input = new System.Windows.Forms.TextBox();
+            this.insert_button = new System.Windows.Forms.Button();
+            this.update_button = new System.Windows.Forms.Button();
+            this.search_button = new System.Windows.Forms.Button();
+            this.delete_button = new System.Windows.Forms.Button();
+            this.book_type_id_input = new System.Windows.Forms.TextBox();
+            this.books_buy_order_id_input = new System.Windows.Forms.TextBox();
+            this.editor_id_input = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -64,67 +70,125 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(87, 140);
+            this.label3.Location = new System.Drawing.Point(87, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Book Name";
             // 
-            // textBox1
+            // book_id_input
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(243, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(294, 29);
-            this.textBox1.TabIndex = 3;
+            this.book_id_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.book_id_input.Location = new System.Drawing.Point(243, 95);
+            this.book_id_input.Name = "book_id_input";
+            this.book_id_input.Size = new System.Drawing.Size(294, 29);
+            this.book_id_input.TabIndex = 3;
             // 
-            // textBox2
+            // book_name_input
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(243, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(294, 29);
-            this.textBox2.TabIndex = 4;
+            this.book_name_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.book_name_input.Location = new System.Drawing.Point(243, 130);
+            this.book_name_input.Name = "book_name_input";
+            this.book_name_input.Size = new System.Drawing.Size(294, 29);
+            this.book_name_input.TabIndex = 4;
             // 
-            // button1
+            // insert_button
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(70, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 33);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = true;
+            this.insert_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insert_button.Location = new System.Drawing.Point(70, 293);
+            this.insert_button.Name = "insert_button";
+            this.insert_button.Size = new System.Drawing.Size(126, 33);
+            this.insert_button.TabIndex = 5;
+            this.insert_button.Text = "Insert";
+            this.insert_button.UseVisualStyleBackColor = true;
+            this.insert_button.Click += new System.EventHandler(this.insert_button_Click);
             // 
-            // button2
+            // update_button
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(243, 210);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 33);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.update_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_button.Location = new System.Drawing.Point(243, 293);
+            this.update_button.Name = "update_button";
+            this.update_button.Size = new System.Drawing.Size(122, 33);
+            this.update_button.TabIndex = 6;
+            this.update_button.Text = "Update";
+            this.update_button.UseVisualStyleBackColor = true;
+            this.update_button.Click += new System.EventHandler(this.update_button_Click);
             // 
-            // button3
+            // search_button
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(392, 210);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 33);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = true;
+            this.search_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_button.Location = new System.Drawing.Point(392, 293);
+            this.search_button.Name = "search_button";
+            this.search_button.Size = new System.Drawing.Size(145, 33);
+            this.search_button.TabIndex = 7;
+            this.search_button.Text = "Search";
+            this.search_button.UseVisualStyleBackColor = true;
+            this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
-            // button4
+            // delete_button
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(577, 210);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 33);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
+            this.delete_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete_button.Location = new System.Drawing.Point(577, 293);
+            this.delete_button.Name = "delete_button";
+            this.delete_button.Size = new System.Drawing.Size(145, 33);
+            this.delete_button.TabIndex = 8;
+            this.delete_button.Text = "Delete";
+            this.delete_button.UseVisualStyleBackColor = true;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
+            // 
+            // book_type_id_input
+            // 
+            this.book_type_id_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.book_type_id_input.Location = new System.Drawing.Point(243, 165);
+            this.book_type_id_input.Name = "book_type_id_input";
+            this.book_type_id_input.Size = new System.Drawing.Size(294, 29);
+            this.book_type_id_input.TabIndex = 9;
+            // 
+            // books_buy_order_id_input
+            // 
+            this.books_buy_order_id_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.books_buy_order_id_input.Location = new System.Drawing.Point(243, 200);
+            this.books_buy_order_id_input.Name = "books_buy_order_id_input";
+            this.books_buy_order_id_input.Size = new System.Drawing.Size(294, 29);
+            this.books_buy_order_id_input.TabIndex = 10;
+            // 
+            // editor_id_input
+            // 
+            this.editor_id_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editor_id_input.Location = new System.Drawing.Point(243, 235);
+            this.editor_id_input.Name = "editor_id_input";
+            this.editor_id_input.Size = new System.Drawing.Size(294, 29);
+            this.editor_id_input.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(75, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 24);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Book Type Id";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(52, 205);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 24);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Book Buy Order";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(117, 240);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 24);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Editor Id";
             // 
             // Book_Query
             // 
@@ -132,12 +196,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.editor_id_input);
+            this.Controls.Add(this.books_buy_order_id_input);
+            this.Controls.Add(this.book_type_id_input);
+            this.Controls.Add(this.delete_button);
+            this.Controls.Add(this.search_button);
+            this.Controls.Add(this.update_button);
+            this.Controls.Add(this.insert_button);
+            this.Controls.Add(this.book_name_input);
+            this.Controls.Add(this.book_id_input);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -153,11 +223,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox book_id_input;
+        private System.Windows.Forms.TextBox book_name_input;
+        private System.Windows.Forms.Button insert_button;
+        private System.Windows.Forms.Button update_button;
+        private System.Windows.Forms.Button search_button;
+        private System.Windows.Forms.Button delete_button;
+        private System.Windows.Forms.TextBox book_type_id_input;
+        private System.Windows.Forms.TextBox books_buy_order_id_input;
+        private System.Windows.Forms.TextBox editor_id_input;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
