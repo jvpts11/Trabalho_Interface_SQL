@@ -30,20 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bookOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.penaltiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.booksAssignedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addIntoDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.digitalBookTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +51,12 @@
             this.bookOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.digitalBookTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.penaltiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.booksAssignedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,13 @@
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
@@ -128,15 +135,139 @@
             this.bookToolStripMenuItem,
             this.orderToolStripMenuItem});
             this.queryToolStripMenuItem.Name = "queryToolStripMenuItem";
-            this.queryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.queryToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.queryToolStripMenuItem.Text = "Query";
             // 
             // bookToolStripMenuItem
             // 
             this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bookToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.bookToolStripMenuItem.Text = "Book";
             this.bookToolStripMenuItem.Click += new System.EventHandler(this.bookToolStripMenuItem_Click);
+            // 
+            // orderToolStripMenuItem
+            // 
+            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.orderToolStripMenuItem.Text = "Order";
+            // 
+            // bookOrderToolStripMenuItem
+            // 
+            this.bookOrderToolStripMenuItem.Name = "bookOrderToolStripMenuItem";
+            this.bookOrderToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.bookOrderToolStripMenuItem.Text = "Book Order";
+            // 
+            // addIntoDatabaseToolStripMenuItem
+            // 
+            this.addIntoDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editorToolStripMenuItem,
+            this.digitalBookTypeToolStripMenuItem,
+            this.physicalBookTypeToolStripMenuItem});
+            this.addIntoDatabaseToolStripMenuItem.Name = "addIntoDatabaseToolStripMenuItem";
+            this.addIntoDatabaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.addIntoDatabaseToolStripMenuItem.Text = "Add into Database";
+            // 
+            // editorToolStripMenuItem
+            // 
+            this.editorToolStripMenuItem.Name = "editorToolStripMenuItem";
+            this.editorToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.editorToolStripMenuItem.Text = "Editor";
+            // 
+            // digitalBookTypeToolStripMenuItem
+            // 
+            this.digitalBookTypeToolStripMenuItem.Name = "digitalBookTypeToolStripMenuItem";
+            this.digitalBookTypeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.digitalBookTypeToolStripMenuItem.Text = "Digital Book Type";
+            // 
+            // physicalBookTypeToolStripMenuItem
+            // 
+            this.physicalBookTypeToolStripMenuItem.Name = "physicalBookTypeToolStripMenuItem";
+            this.physicalBookTypeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.physicalBookTypeToolStripMenuItem.Text = "Physical Book Type";
+            // 
+            // checkToolStripMenuItem1
+            // 
+            this.checkToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentToolStripMenuItem,
+            this.editorsToolStripMenuItem,
+            this.ordersToolStripMenuItem,
+            this.bookOrdersToolStripMenuItem,
+            this.bookTypesToolStripMenuItem,
+            this.digitalBookTypesToolStripMenuItem});
+            this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
+            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.checkToolStripMenuItem1.Text = "Check";
+            // 
+            // studentToolStripMenuItem
+            // 
+            this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.booksReturnedToolStripMenuItem});
+            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.studentToolStripMenuItem.Text = "Student";
+            // 
+            // booksReturnedToolStripMenuItem
+            // 
+            this.booksReturnedToolStripMenuItem.Name = "booksReturnedToolStripMenuItem";
+            this.booksReturnedToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.booksReturnedToolStripMenuItem.Text = "Books Returned";
+            // 
+            // editorsToolStripMenuItem
+            // 
+            this.editorsToolStripMenuItem.Name = "editorsToolStripMenuItem";
+            this.editorsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.editorsToolStripMenuItem.Text = "Editors";
+            // 
+            // ordersToolStripMenuItem
+            // 
+            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
+            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.ordersToolStripMenuItem.Text = "Orders";
+            // 
+            // bookOrdersToolStripMenuItem
+            // 
+            this.bookOrdersToolStripMenuItem.Name = "bookOrdersToolStripMenuItem";
+            this.bookOrdersToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.bookOrdersToolStripMenuItem.Text = "Book Orders";
+            // 
+            // bookTypesToolStripMenuItem
+            // 
+            this.bookTypesToolStripMenuItem.Name = "bookTypesToolStripMenuItem";
+            this.bookTypesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.bookTypesToolStripMenuItem.Text = "Book Types";
+            // 
+            // digitalBookTypesToolStripMenuItem
+            // 
+            this.digitalBookTypesToolStripMenuItem.Name = "digitalBookTypesToolStripMenuItem";
+            this.digitalBookTypesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.digitalBookTypesToolStripMenuItem.Text = "Digital Book Types";
+            // 
+            // checkToolStripMenuItem
+            // 
+            this.checkToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.penaltiesToolStripMenuItem,
+            this.booksAssignedToolStripMenuItem});
+            this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
+            this.checkToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.checkToolStripMenuItem.Text = "Check";
+            // 
+            // penaltiesToolStripMenuItem
+            // 
+            this.penaltiesToolStripMenuItem.Name = "penaltiesToolStripMenuItem";
+            this.penaltiesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.penaltiesToolStripMenuItem.Text = "Penalties";
+            // 
+            // booksAssignedToolStripMenuItem
+            // 
+            this.booksAssignedToolStripMenuItem.Name = "booksAssignedToolStripMenuItem";
+            this.booksAssignedToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.booksAssignedToolStripMenuItem.Text = "Books Provided";
+            // 
+            // registerStudentToolStripMenuItem
+            // 
+            this.registerStudentToolStripMenuItem.Name = "registerStudentToolStripMenuItem";
+            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
+            this.registerStudentToolStripMenuItem.Text = "Register Student";
             // 
             // aboutToolStripMenuItem
             // 
@@ -154,136 +285,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Select an option in the menu";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // bookOrderToolStripMenuItem
-            // 
-            this.bookOrderToolStripMenuItem.Name = "bookOrderToolStripMenuItem";
-            this.bookOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bookOrderToolStripMenuItem.Text = "Book Order";
-            // 
-            // orderToolStripMenuItem
-            // 
-            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.orderToolStripMenuItem.Text = "Order";
-            // 
-            // checkToolStripMenuItem
-            // 
-            this.checkToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.penaltiesToolStripMenuItem,
-            this.booksAssignedToolStripMenuItem});
-            this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
-            this.checkToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.checkToolStripMenuItem.Text = "Check";
-            // 
-            // penaltiesToolStripMenuItem
-            // 
-            this.penaltiesToolStripMenuItem.Name = "penaltiesToolStripMenuItem";
-            this.penaltiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.penaltiesToolStripMenuItem.Text = "Penalties";
-            // 
-            // booksAssignedToolStripMenuItem
-            // 
-            this.booksAssignedToolStripMenuItem.Name = "booksAssignedToolStripMenuItem";
-            this.booksAssignedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.booksAssignedToolStripMenuItem.Text = "Books Provided";
-            // 
-            // registerStudentToolStripMenuItem
-            // 
-            this.registerStudentToolStripMenuItem.Name = "registerStudentToolStripMenuItem";
-            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
-            this.registerStudentToolStripMenuItem.Text = "Register Student";
-            // 
-            // addIntoDatabaseToolStripMenuItem
-            // 
-            this.addIntoDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editorToolStripMenuItem,
-            this.digitalBookTypeToolStripMenuItem,
-            this.physicalBookTypeToolStripMenuItem});
-            this.addIntoDatabaseToolStripMenuItem.Name = "addIntoDatabaseToolStripMenuItem";
-            this.addIntoDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addIntoDatabaseToolStripMenuItem.Text = "Add into Database";
-            // 
-            // editorToolStripMenuItem
-            // 
-            this.editorToolStripMenuItem.Name = "editorToolStripMenuItem";
-            this.editorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editorToolStripMenuItem.Text = "Editor";
-            // 
-            // digitalBookTypeToolStripMenuItem
-            // 
-            this.digitalBookTypeToolStripMenuItem.Name = "digitalBookTypeToolStripMenuItem";
-            this.digitalBookTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.digitalBookTypeToolStripMenuItem.Text = "Digital Book Type";
-            // 
-            // physicalBookTypeToolStripMenuItem
-            // 
-            this.physicalBookTypeToolStripMenuItem.Name = "physicalBookTypeToolStripMenuItem";
-            this.physicalBookTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.physicalBookTypeToolStripMenuItem.Text = "Physical Book Type";
-            // 
-            // checkToolStripMenuItem1
-            // 
-            this.checkToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentToolStripMenuItem,
-            this.editorsToolStripMenuItem,
-            this.ordersToolStripMenuItem,
-            this.bookOrdersToolStripMenuItem,
-            this.bookTypesToolStripMenuItem,
-            this.digitalBookTypesToolStripMenuItem});
-            this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
-            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.checkToolStripMenuItem1.Text = "Check";
-            // 
-            // studentToolStripMenuItem
-            // 
-            this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.booksReturnedToolStripMenuItem});
-            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.studentToolStripMenuItem.Text = "Student";
-            // 
-            // booksReturnedToolStripMenuItem
-            // 
-            this.booksReturnedToolStripMenuItem.Name = "booksReturnedToolStripMenuItem";
-            this.booksReturnedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.booksReturnedToolStripMenuItem.Text = "Books Returned";
-            // 
-            // editorsToolStripMenuItem
-            // 
-            this.editorsToolStripMenuItem.Name = "editorsToolStripMenuItem";
-            this.editorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editorsToolStripMenuItem.Text = "Editors";
-            // 
-            // ordersToolStripMenuItem
-            // 
-            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
-            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ordersToolStripMenuItem.Text = "Orders";
-            // 
-            // bookOrdersToolStripMenuItem
-            // 
-            this.bookOrdersToolStripMenuItem.Name = "bookOrdersToolStripMenuItem";
-            this.bookOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bookOrdersToolStripMenuItem.Text = "Book Orders";
-            // 
-            // bookTypesToolStripMenuItem
-            // 
-            this.bookTypesToolStripMenuItem.Name = "bookTypesToolStripMenuItem";
-            this.bookTypesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bookTypesToolStripMenuItem.Text = "Book Types";
-            // 
-            // digitalBookTypesToolStripMenuItem
-            // 
-            this.digitalBookTypesToolStripMenuItem.Name = "digitalBookTypesToolStripMenuItem";
-            this.digitalBookTypesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.digitalBookTypesToolStripMenuItem.Text = "Digital Book Types";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // Form1
             // 

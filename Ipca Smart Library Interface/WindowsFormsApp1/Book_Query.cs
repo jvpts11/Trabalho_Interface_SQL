@@ -25,10 +25,8 @@ namespace WindowsFormsApp1
 
         private void insert_button_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=JOTAPC\AULAS;Initial Catalog=IPCA_SMART_LIBRARY;User ID=sa;Password=123456");
-            con.Open();
 
-            SqlCommand command = new SqlCommand("insert into dbo.Book values(@BKId,@BKName,@TypeId,@BORId,null,@EDTId,null,null)", con);
+            SqlCommand command = new SqlCommand("insert into dbo.Book values(@BKId,@BKName,@TypeId,@BORId,null,@EDTId,null,null)", sql.con);
             command.Parameters.AddWithValue("@BKId", int.Parse(book_id_input.Text));
             command.Parameters.AddWithValue("@BKName", book_name_input.Text);
             command.Parameters.AddWithValue("@TypeId", int.Parse(book_type_id_input.Text));
@@ -36,7 +34,6 @@ namespace WindowsFormsApp1
             command.Parameters.AddWithValue("@EDTId", int.Parse(editor_id_input.Text));
             command.ExecuteNonQuery();
             
-            con.Close();
 
             MessageBox.Show("Insert Success!");
         }
@@ -48,10 +45,8 @@ namespace WindowsFormsApp1
 
         private void search_button_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=JOTAPC\AULAS;Initial Catalog=IPCA_SMART_LIBRARY;User ID=sa;Password=123456");
-            con.Open();
 
-            SqlCommand command = new SqlCommand("select * from dbo.Book",con);
+            SqlCommand command = new SqlCommand("exec dbo.showBooks",sql.con);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -60,14 +55,10 @@ namespace WindowsFormsApp1
 
         private void delete_button_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=JOTAPC\AULAS;Initial Catalog=IPCA_SMART_LIBRARY;User ID=sa;Password=123456");
-            con.Open();
 
-            SqlCommand command = new SqlCommand("delete dbo.Book where BKId=@id",con);
+            SqlCommand command = new SqlCommand("delete dbo.Book where BKId=@id",sql.con);
             command.Parameters.AddWithValue("@id" ,int.Parse(book_id_input.Text));
             command.ExecuteNonQuery();
-
-            con.Close();
 
             MessageBox.Show("Delete Success!");
         }

@@ -56,5 +56,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sql.con.Close();
+            this.Hide();
+            new Login_Screen().Show();
+        }
     }
 }
