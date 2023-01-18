@@ -29,16 +29,16 @@ namespace WindowsFormsApp1
             con.Open();
 
             SqlCommand command = new SqlCommand("insert into dbo.Book values(@BKId,@BKName,@TypeId,@BORId,null,@EDTId,null,null)", con);
-            command.Parameters.Add("@BKId", int.Parse(book_id_input.Text));
-            command.Parameters.Add("@BKName", book_name_input.Text);
-            command.Parameters.Add("@TypeId", int.Parse(book_type_id_input.Text));
-            command.Parameters.Add("@BORId", int.Parse(books_buy_order_id_input.Text));
-            command.Parameters.Add("@EDTId", int.Parse(editor_id_input.Text));
+            command.Parameters.AddWithValue("@BKId", int.Parse(book_id_input.Text));
+            command.Parameters.AddWithValue("@BKName", book_name_input.Text);
+            command.Parameters.AddWithValue("@TypeId", int.Parse(book_type_id_input.Text));
+            command.Parameters.AddWithValue("@BORId", int.Parse(books_buy_order_id_input.Text));
+            command.Parameters.AddWithValue("@EDTId", int.Parse(editor_id_input.Text));
             command.ExecuteNonQuery();
             
             con.Close();
 
-            MessageBox.Show("Success!");
+            MessageBox.Show("Insert Success!");
         }
 
         private void update_button_Click(object sender, EventArgs e)
@@ -48,12 +48,28 @@ namespace WindowsFormsApp1
 
         private void search_button_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(@"Data Source=JOTAPC\AULAS;Initial Catalog=IPCA_SMART_LIBRARY;User ID=sa;Password=123456");
+            con.Open();
 
+            SqlCommand command = new SqlCommand("select * from dbo.Book",con);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
 
         private void delete_button_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(@"Data Source=JOTAPC\AULAS;Initial Catalog=IPCA_SMART_LIBRARY;User ID=sa;Password=123456");
+            con.Open();
 
+            SqlCommand command = new SqlCommand("delete dbo.Book where BKId=@id",con);
+            command.Parameters.AddWithValue("@id" ,int.Parse(book_id_input.Text));
+            command.ExecuteNonQuery();
+
+            con.Close();
+
+            MessageBox.Show("Delete Success!");
         }
     }
 }
