@@ -41,9 +41,9 @@ namespace WindowsFormsApp1
             {
                 sql.con = new SqlConnection(finalConnectionString);
                 sql.con.Open();
+                MessageBox.Show("Login Successful!");
                 new Form1().Show();
                 this.Hide();
-                MessageBox.Show("Login Successful!");
             }
             catch(Exception name)
             {

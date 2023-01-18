@@ -40,7 +40,15 @@ namespace WindowsFormsApp1
 
         private void update_button_Click(object sender, EventArgs e)
         {
+            SqlCommand command = new SqlCommand("update dbo.Book set BKName=@BKName, TypeId=@TypeId, BORId=@BORId, EDTId=@EDTId where BKId = @BKId", sql.con);
+            command.Parameters.AddWithValue("@BKId", int.Parse(book_id_input.Text));
+            command.Parameters.AddWithValue("@BKName", book_name_input.Text);
+            command.Parameters.AddWithValue("@TypeId", int.Parse(book_type_id_input.Text));
+            command.Parameters.AddWithValue("@BORId", int.Parse(books_buy_order_id_input.Text));
+            command.Parameters.AddWithValue("@EDTId", int.Parse(editor_id_input.Text));
+            command.ExecuteNonQuery();
 
+            MessageBox.Show("Successfully Updated");
         }
 
         private void search_button_Click(object sender, EventArgs e)
