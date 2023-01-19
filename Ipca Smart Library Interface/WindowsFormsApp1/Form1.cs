@@ -83,5 +83,15 @@ namespace WindowsFormsApp1
         {
             new AddEditor().Show();
         }
+
+        private void digitalBookTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AddDigitalBookType().Show();
+        }
+
+        private void physicalBookTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AddPhysicalBookType().Show();
+        }
     }
 }
