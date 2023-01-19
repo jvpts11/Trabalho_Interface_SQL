@@ -57,6 +57,7 @@
             this.registerStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
+            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +80,7 @@
             this.quitToolStripMenuItem,
             this.newToolStripMenuItem,
             this.checkToolStripMenuItem,
+            this.statisticsToolStripMenuItem,
             this.registerStudentToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -286,6 +288,13 @@
             this.label2.Text = "Select an option in the menu";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
+            // statisticsToolStripMenuItem
+            // 
+            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
+            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.statisticsToolStripMenuItem.Text = "Statistics";
+            this.statisticsToolStripMenuItem.Click += new System.EventHandler(this.statisticsToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +344,7 @@
         private System.Windows.Forms.ToolStripMenuItem bookOrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookTypesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem digitalBookTypesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
     }
 }
 

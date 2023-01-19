@@ -11,3 +11,4 @@ C:\Users\jvpts11\Documents\GitHub\Trabalho_Interface_SQL\Ipca Smart Library Inte
 C:\Users\jvpts11\Documents\GitHub\Trabalho_Interface_SQL\Ipca Smart Library Interface\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Users\jvpts11\Documents\GitHub\Trabalho_Interface_SQL\Ipca Smart Library Interface\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Book_Query.resources
 C:\Users\jvpts11\Documents\GitHub\Trabalho_Interface_SQL\Ipca Smart Library Interface\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.sql.resources
+C:\Users\jvpts11\Documents\GitHub\Trabalho_Interface_SQL\Ipca Smart Library Interface\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Statistics_Screen.resources

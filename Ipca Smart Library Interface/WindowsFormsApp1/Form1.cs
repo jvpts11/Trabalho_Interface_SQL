@@ -63,5 +63,10 @@ namespace WindowsFormsApp1
             this.Hide();
             new Login_Screen().Show();
         }
+
+        private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Statistics_Screen().Show();
+        }
     }
 }
