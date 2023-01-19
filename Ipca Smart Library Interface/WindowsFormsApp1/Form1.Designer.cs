@@ -57,6 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.specialQueryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.digitalBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,7 +136,8 @@
             this.queryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bookToolStripMenuItem,
             this.orderToolStripMenuItem,
-            this.specialQueryToolStripMenuItem});
+            this.specialQueryToolStripMenuItem,
+            this.digitalBookToolStripMenuItem});
             this.queryToolStripMenuItem.Name = "queryToolStripMenuItem";
             this.queryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.queryToolStripMenuItem.Text = "Query";
@@ -156,8 +158,9 @@
             // bookOrderToolStripMenuItem
             // 
             this.bookOrderToolStripMenuItem.Name = "bookOrderToolStripMenuItem";
-            this.bookOrderToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.bookOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookOrderToolStripMenuItem.Text = "Book Order";
+            this.bookOrderToolStripMenuItem.Click += new System.EventHandler(this.bookOrderToolStripMenuItem_Click);
             // 
             // addIntoDatabaseToolStripMenuItem
             // 
@@ -166,14 +169,15 @@
             this.digitalBookTypeToolStripMenuItem,
             this.physicalBookTypeToolStripMenuItem});
             this.addIntoDatabaseToolStripMenuItem.Name = "addIntoDatabaseToolStripMenuItem";
-            this.addIntoDatabaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.addIntoDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addIntoDatabaseToolStripMenuItem.Text = "Add into Database";
             // 
             // editorToolStripMenuItem
             // 
             this.editorToolStripMenuItem.Name = "editorToolStripMenuItem";
-            this.editorToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.editorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editorToolStripMenuItem.Text = "Editor";
+            this.editorToolStripMenuItem.Click += new System.EventHandler(this.editorToolStripMenuItem_Click);
             // 
             // digitalBookTypeToolStripMenuItem
             // 
@@ -287,6 +291,12 @@
             this.specialQueryToolStripMenuItem.Text = "Special Query";
             this.specialQueryToolStripMenuItem.Click += new System.EventHandler(this.specialQueryToolStripMenuItem_Click);
             // 
+            // digitalBookToolStripMenuItem
+            // 
+            this.digitalBookToolStripMenuItem.Name = "digitalBookToolStripMenuItem";
+            this.digitalBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.digitalBookToolStripMenuItem.Text = "Digital Book";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +346,7 @@
         private System.Windows.Forms.ToolStripMenuItem digitalBookTypesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem specialQueryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem digitalBookToolStripMenuItem;
     }
 }
 

@@ -73,5 +73,15 @@ namespace WindowsFormsApp1
         {
             new SpecialQueryScreen().Show();
         }
+
+        private void bookOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new MakeBookOrder().Show();
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AddEditor().Show();
+        }
     }
 }
