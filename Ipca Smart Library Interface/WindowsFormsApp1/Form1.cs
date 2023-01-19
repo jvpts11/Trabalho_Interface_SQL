@@ -68,5 +68,10 @@ namespace WindowsFormsApp1
         {
             new Statistics_Screen().Show();
         }
+
+        private void specialQueryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SpecialQueryScreen().Show();
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.statistics_return_extension = new System.Windows.Forms.Button();
             this.statistics_return_delays = new System.Windows.Forms.Button();
             this.statistics_students_service = new System.Windows.Forms.Button();
+            this.registered_students_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,12 +96,23 @@
             this.statistics_students_service.UseVisualStyleBackColor = true;
             this.statistics_students_service.Click += new System.EventHandler(this.statistics_students_service_Click);
             // 
+            // registered_students_button
+            // 
+            this.registered_students_button.Location = new System.Drawing.Point(284, 36);
+            this.registered_students_button.Name = "registered_students_button";
+            this.registered_students_button.Size = new System.Drawing.Size(206, 30);
+            this.registered_students_button.TabIndex = 6;
+            this.registered_students_button.Text = "List Students registered";
+            this.registered_students_button.UseVisualStyleBackColor = true;
+            this.registered_students_button.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Statistics_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.registered_students_button);
             this.Controls.Add(this.statistics_students_service);
             this.Controls.Add(this.statistics_return_delays);
             this.Controls.Add(this.statistics_return_extension);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Button statistics_return_extension;
         private System.Windows.Forms.Button statistics_return_delays;
         private System.Windows.Forms.Button statistics_students_service;
+        private System.Windows.Forms.Button registered_students_button;
     }
 }

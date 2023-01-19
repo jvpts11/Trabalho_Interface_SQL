@@ -65,5 +65,21 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Not yet Implemented");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand("select * from Student", sql.con);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Could not add student due to: " + ex.Message);
+            }
+        }
     }
 }

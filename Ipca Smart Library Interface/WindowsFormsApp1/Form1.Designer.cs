@@ -44,8 +44,6 @@
             this.digitalBookTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.physicalBookTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.booksReturnedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,6 +56,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.specialQueryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,9 +134,10 @@
             // 
             this.queryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bookToolStripMenuItem,
-            this.orderToolStripMenuItem});
+            this.orderToolStripMenuItem,
+            this.specialQueryToolStripMenuItem});
             this.queryToolStripMenuItem.Name = "queryToolStripMenuItem";
-            this.queryToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.queryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.queryToolStripMenuItem.Text = "Query";
             // 
             // bookToolStripMenuItem
@@ -190,29 +190,14 @@
             // checkToolStripMenuItem1
             // 
             this.checkToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentToolStripMenuItem,
             this.editorsToolStripMenuItem,
             this.ordersToolStripMenuItem,
             this.bookOrdersToolStripMenuItem,
             this.bookTypesToolStripMenuItem,
             this.digitalBookTypesToolStripMenuItem});
             this.checkToolStripMenuItem1.Name = "checkToolStripMenuItem1";
-            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.checkToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.checkToolStripMenuItem1.Text = "Check";
-            // 
-            // studentToolStripMenuItem
-            // 
-            this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.booksReturnedToolStripMenuItem});
-            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.studentToolStripMenuItem.Text = "Student";
-            // 
-            // booksReturnedToolStripMenuItem
-            // 
-            this.booksReturnedToolStripMenuItem.Name = "booksReturnedToolStripMenuItem";
-            this.booksReturnedToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.booksReturnedToolStripMenuItem.Text = "Books Returned";
             // 
             // editorsToolStripMenuItem
             // 
@@ -295,6 +280,13 @@
             this.statisticsToolStripMenuItem.Text = "Statistics";
             this.statisticsToolStripMenuItem.Click += new System.EventHandler(this.statisticsToolStripMenuItem_Click);
             // 
+            // specialQueryToolStripMenuItem
+            // 
+            this.specialQueryToolStripMenuItem.Name = "specialQueryToolStripMenuItem";
+            this.specialQueryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.specialQueryToolStripMenuItem.Text = "Special Query";
+            this.specialQueryToolStripMenuItem.Click += new System.EventHandler(this.specialQueryToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,14 +329,13 @@
         private System.Windows.Forms.ToolStripMenuItem physicalBookTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem booksReturnedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookOrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookTypesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem digitalBookTypesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem specialQueryToolStripMenuItem;
     }
 }
 
