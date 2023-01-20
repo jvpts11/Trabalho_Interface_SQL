@@ -53,17 +53,17 @@ namespace WindowsFormsApp1
 
         private void statistics_return_extension_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not yet Implemented");
+            MessageBox.Show("Not yet Implemented, use the custom query window to do this");
         }
 
         private void statistics_return_delays_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not yet Implemented");
+            MessageBox.Show("Not yet Implemented, use the custom query window to do this");
         }
 
         private void statistics_returned_books_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not yet Implemented");
+            MessageBox.Show("Not yet Implemented, use the custom query window to do this");
         }
 
         private void button1_Click(object sender, EventArgs e)

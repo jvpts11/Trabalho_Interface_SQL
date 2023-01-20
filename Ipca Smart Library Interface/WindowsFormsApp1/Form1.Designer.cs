@@ -38,6 +38,8 @@
             this.queryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.specialQueryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.digitalBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addIntoDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,13 +48,11 @@
             this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.penaltiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.booksAssignedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
-            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.specialQueryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.digitalBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,26 +133,39 @@
             this.specialQueryToolStripMenuItem,
             this.digitalBookToolStripMenuItem});
             this.queryToolStripMenuItem.Name = "queryToolStripMenuItem";
-            this.queryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.queryToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.queryToolStripMenuItem.Text = "Query";
             // 
             // bookToolStripMenuItem
             // 
             this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.bookToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.bookToolStripMenuItem.Text = "Book";
             this.bookToolStripMenuItem.Click += new System.EventHandler(this.bookToolStripMenuItem_Click);
             // 
             // orderToolStripMenuItem
             // 
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.orderToolStripMenuItem.Text = "Order";
+            // 
+            // specialQueryToolStripMenuItem
+            // 
+            this.specialQueryToolStripMenuItem.Name = "specialQueryToolStripMenuItem";
+            this.specialQueryToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.specialQueryToolStripMenuItem.Text = "Special Query";
+            this.specialQueryToolStripMenuItem.Click += new System.EventHandler(this.specialQueryToolStripMenuItem_Click);
+            // 
+            // digitalBookToolStripMenuItem
+            // 
+            this.digitalBookToolStripMenuItem.Name = "digitalBookToolStripMenuItem";
+            this.digitalBookToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.digitalBookToolStripMenuItem.Text = "Digital Book";
             // 
             // bookOrderToolStripMenuItem
             // 
             this.bookOrderToolStripMenuItem.Name = "bookOrderToolStripMenuItem";
-            this.bookOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bookOrderToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.bookOrderToolStripMenuItem.Text = "Book Order";
             this.bookOrderToolStripMenuItem.Click += new System.EventHandler(this.bookOrderToolStripMenuItem_Click);
             // 
@@ -163,27 +176,27 @@
             this.digitalBookTypeToolStripMenuItem,
             this.physicalBookTypeToolStripMenuItem});
             this.addIntoDatabaseToolStripMenuItem.Name = "addIntoDatabaseToolStripMenuItem";
-            this.addIntoDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addIntoDatabaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.addIntoDatabaseToolStripMenuItem.Text = "Add into Database";
             // 
             // editorToolStripMenuItem
             // 
             this.editorToolStripMenuItem.Name = "editorToolStripMenuItem";
-            this.editorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editorToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.editorToolStripMenuItem.Text = "Editor";
             this.editorToolStripMenuItem.Click += new System.EventHandler(this.editorToolStripMenuItem_Click);
             // 
             // digitalBookTypeToolStripMenuItem
             // 
             this.digitalBookTypeToolStripMenuItem.Name = "digitalBookTypeToolStripMenuItem";
-            this.digitalBookTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.digitalBookTypeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.digitalBookTypeToolStripMenuItem.Text = "Digital Book Type";
             this.digitalBookTypeToolStripMenuItem.Click += new System.EventHandler(this.digitalBookTypeToolStripMenuItem_Click);
             // 
             // physicalBookTypeToolStripMenuItem
             // 
             this.physicalBookTypeToolStripMenuItem.Name = "physicalBookTypeToolStripMenuItem";
-            this.physicalBookTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.physicalBookTypeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.physicalBookTypeToolStripMenuItem.Text = "Physical Book Type";
             this.physicalBookTypeToolStripMenuItem.Click += new System.EventHandler(this.physicalBookTypeToolStripMenuItem_Click);
             // 
@@ -200,20 +213,36 @@
             // penaltiesToolStripMenuItem
             // 
             this.penaltiesToolStripMenuItem.Name = "penaltiesToolStripMenuItem";
-            this.penaltiesToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.penaltiesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.penaltiesToolStripMenuItem.Text = "Penalties";
+            this.penaltiesToolStripMenuItem.Click += new System.EventHandler(this.penaltiesToolStripMenuItem_Click);
             // 
             // booksAssignedToolStripMenuItem
             // 
             this.booksAssignedToolStripMenuItem.Name = "booksAssignedToolStripMenuItem";
-            this.booksAssignedToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.booksAssignedToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.booksAssignedToolStripMenuItem.Text = "Books Provided";
+            this.booksAssignedToolStripMenuItem.Click += new System.EventHandler(this.booksAssignedToolStripMenuItem_Click);
+            // 
+            // checkDatabaseToolStripMenuItem
+            // 
+            this.checkDatabaseToolStripMenuItem.Name = "checkDatabaseToolStripMenuItem";
+            this.checkDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.checkDatabaseToolStripMenuItem.Text = "Check Database";
+            // 
+            // statisticsToolStripMenuItem
+            // 
+            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
+            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.statisticsToolStripMenuItem.Text = "Statistics";
+            this.statisticsToolStripMenuItem.Click += new System.EventHandler(this.statisticsToolStripMenuItem_Click);
             // 
             // registerStudentToolStripMenuItem
             // 
             this.registerStudentToolStripMenuItem.Name = "registerStudentToolStripMenuItem";
             this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
             this.registerStudentToolStripMenuItem.Text = "Register Student";
+            this.registerStudentToolStripMenuItem.Click += new System.EventHandler(this.registerStudentToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -231,32 +260,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Select an option in the menu";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // statisticsToolStripMenuItem
-            // 
-            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
-            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.statisticsToolStripMenuItem.Text = "Statistics";
-            this.statisticsToolStripMenuItem.Click += new System.EventHandler(this.statisticsToolStripMenuItem_Click);
-            // 
-            // specialQueryToolStripMenuItem
-            // 
-            this.specialQueryToolStripMenuItem.Name = "specialQueryToolStripMenuItem";
-            this.specialQueryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.specialQueryToolStripMenuItem.Text = "Special Query";
-            this.specialQueryToolStripMenuItem.Click += new System.EventHandler(this.specialQueryToolStripMenuItem_Click);
-            // 
-            // digitalBookToolStripMenuItem
-            // 
-            this.digitalBookToolStripMenuItem.Name = "digitalBookToolStripMenuItem";
-            this.digitalBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.digitalBookToolStripMenuItem.Text = "Digital Book";
-            // 
-            // checkDatabaseToolStripMenuItem
-            // 
-            this.checkDatabaseToolStripMenuItem.Name = "checkDatabaseToolStripMenuItem";
-            this.checkDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.checkDatabaseToolStripMenuItem.Text = "Check Database";
             // 
             // Form1
             // 

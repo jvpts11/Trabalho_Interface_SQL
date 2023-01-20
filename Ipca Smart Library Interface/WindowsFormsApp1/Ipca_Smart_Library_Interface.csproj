@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDigitalBookType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDigitalBookType.Designer.cs">
+      <DependentUpon>AddDigitalBookType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditor.Designer.cs">
+      <DependentUpon>AddEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPhysicalBookType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPhysicalBookType.Designer.cs">
+      <DependentUpon>AddPhysicalBookType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Book_Query.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Book_Query.Designer.cs">
       <DependentUpon>Book_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckDatabase.Designer.cs">
+      <DependentUpon>CheckDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -61,6 +85,12 @@
     <Compile Include="Login_Screen.cs" />
     <Compile Include="Login_Screen.Designer.cs">
       <DependentUpon>Login_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakeBookOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeBookOrder.Designer.cs">
+      <DependentUpon>MakeBookOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,14 +112,29 @@
     <Compile Include="Statistics_Screen.Designer.cs">
       <DependentUpon>Statistics_Screen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddDigitalBookType.resx">
+      <DependentUpon>AddDigitalBookType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditor.resx">
+      <DependentUpon>AddEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPhysicalBookType.resx">
+      <DependentUpon>AddPhysicalBookType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Book_Query.resx">
       <DependentUpon>Book_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckDatabase.resx">
+      <DependentUpon>CheckDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Screen.resx">
       <DependentUpon>Login_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeBookOrder.resx">
+      <DependentUpon>MakeBookOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

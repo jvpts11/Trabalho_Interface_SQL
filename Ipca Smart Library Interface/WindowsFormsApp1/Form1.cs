@@ -93,5 +93,20 @@ namespace WindowsFormsApp1
         {
             new AddPhysicalBookType().Show();
         }
+
+        private void booksAssignedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not yet Implemented, use the custom query window to do this");
+        }
+
+        private void penaltiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not yet Implemented, use the custom query window to do this");
+        }
+
+        private void registerStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new RegisterStudent().Show();
+        }
     }
 }

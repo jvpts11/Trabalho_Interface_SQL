@@ -31,15 +31,15 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username, password, modifiedConnectionString, finalConnectionString;
+            string username, password;
             username = login_user_input.Text;
             password = login_password_input.Text;
-            string connectionString = @"Data Source=JOTAPC\AULAS;Initial Catalog=IPCA_SMART_LIBRARY;User ID=;Password=";
-            modifiedConnectionString = connectionString.Insert(68,username);
-            finalConnectionString = modifiedConnectionString.Insert(80, password);
+            string connectionString = $@"Data Source=JOTAPC\AULAS;Initial Catalog=IPCA_SMART_LIBRARY;User ID={username};Password={password}";
+            //modifiedConnectionString = connectionString.Insert(68,username); deprecated
+            //finalConnectionString = modifiedConnectionString.Insert(80, password); deprecated
             try
             {
-                sql.con = new SqlConnection(finalConnectionString);
+                sql.con = new SqlConnection(connectionString);
                 sql.con.Open();
                 MessageBox.Show("Login Successful!");
                 new Form1().Show();
